@@ -7,19 +7,20 @@ import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+//const root = ReactDOM.createRoot(document.getElementById('root'));
+//root.render(
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 ReactDOM.render(
-    <QueryClientProvider client={queryClient}>
+
   <React.StrictMode>
+      <QueryClientProvider client={queryClient}>
 <ChakraProvider>
     <App />
   </ChakraProvider>
-  </React.StrictMode>
-    </QueryClientProvider>,
+      </QueryClientProvider>
+  </React.StrictMode>,
 document.getElementById("root")
 );
 
